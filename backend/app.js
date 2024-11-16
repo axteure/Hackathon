@@ -10,4 +10,4 @@ app.use(cors());
 app.get('/', (req, res) => res.send('Bienvenue au Hackathon'));
 
 // Lancement du serveur
-app.listen(3000, () => console.log('Serveur backend démarré sur le port 3000'));
+app.listen(5000, () => console.log('Serveur backend démarré sur le port 5000'));
