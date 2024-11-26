@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 5000
 
 # Commande par défaut pour un environnement de développement
-CMD ["nodemon", "app.js"]
+CMD ["nodemon", "--legacy-watch", "app.js"]
