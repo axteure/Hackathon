@@ -7,8 +7,8 @@ WORKDIR /app
 # Copier les fichiers de package pour installer les dépendances
 COPY package*.json ./
 
-# Installer les dépendances du projet
-RUN npm install
+# Installer Nodemon pour le développement
+RUN npm install -g nodemon
 
 # Copier le reste des fichiers du backend
 COPY . .
@@ -16,5 +16,5 @@ COPY . .
 # Exposer le port utilisé par le backend
 EXPOSE 5000
 
-# Commande par défaut pour lancer le serveur
-CMD ["node", "app.js"]
+# Commande par défaut pour un environnement de développement
+CMD ["nodemon", "app.js"]
